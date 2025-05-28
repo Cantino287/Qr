@@ -1,0 +1,37 @@
+.custom-heading {
+    font-size: max(1vw, 14px);  /* default base */
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.custom-heading:hover {
+    transform: scale(1.05);  /* smooth zoom on hover */
+}
+
+/* For small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .custom-heading {
+        font-size: 18px;
+    }
+}
+
+/* For medium devices (tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .custom-heading {
+        font-size: 12px;
+    }
+}
+
+/* For large devices (small laptops, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .custom-heading {
+        font-size: 16px;
+    }
+}
+
+/* For extra-large screens (desktops, above 1024px) */
+@media (min-width: 1025px) {
+    .custom-heading {
+        font-size: 20px;
+    }
+}
