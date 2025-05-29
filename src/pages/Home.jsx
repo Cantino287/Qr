@@ -62,7 +62,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchCat = () => {
-      fetch("http://localhost:8082/category/get", {
+      fetch("https://cantino.onrender.com/category/get", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -93,7 +93,7 @@ const Home = () => {
   // Fetch Products
   useEffect(() => {
     const fetchMenu = () => {
-      fetch(`http://localhost:8082/product/shop/${shopId}`, {
+      fetch(`https://cantino.onrender.com/product/shop/${shopId}`, {
         method: "GET",
         credentials: "include",
         headers: {
@@ -150,7 +150,7 @@ const Home = () => {
 
     if (shopId) {
       axios
-        .get(`http://localhost:8082/shop/shop-name/${shopId}`)
+        .get(`https://cantino.onrender.com/shop/shop-name/${shopId}`)
         .then((res) => setShopName(res.data))
         .catch((err) => console.error("Error fetching shop name:", err));
     }
@@ -222,7 +222,7 @@ const Home = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8082/orders/placeOrder", {
+      const response = await fetch("https://cantino.onrender.com/orders/placeOrder", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -341,7 +341,7 @@ const Home = () => {
               <Card
                 key={item.id}
                 name={item.name}
-                image={`http://localhost:8082/images/product-images/${item.image}`}
+                image={`https://cantino.onrender.com/images/product-images/${item.image}`}
                 price={item.price}
                 id={item.id}
                 type={item.type}
