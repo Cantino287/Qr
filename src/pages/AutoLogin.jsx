@@ -76,7 +76,7 @@ const AutoLogin = () => {
                 const [tableNumber, seat, password, shopId] = decoded.split(":");
 
                 // Proceed with login using decoded values
-                fetch(`http://localhost:8082/table-login/auto-login?tableNumber=${tableNumber}&seat=${seat}&password=${password}&shopId=${shopId}`)
+                fetch(`https://cantino.onrender.com/table-login/auto-login?tableNumber=${tableNumber}&seat=${seat}&password=${password}&shopId=${shopId}`)
                     .then(response => {
                         if (!response.ok) throw new Error("Login failed");
                         return response.json();
